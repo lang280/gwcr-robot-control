@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    作者: Jianjun Lang
+    创建日期: 2023/10/7
+    描述: 在client浏览器端使用滑块控制机器人速度，转向，吸力数据，发送往服务器
+-->
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Control</title>
+    <!-- 链接外部CSS文件 -->
+    <link rel="stylesheet" type="text/css" href="web_page.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script>
+        // 变量, 从http服务器传递到JavaScript
+        // websocket端口号
+        window.serverPort_websocket = '{placeholder_websocketPort}';
+    </script>
+</head>
+<body>
+    <div id="grid_layout">
+        <!-- 摄像头视频容器 -->
+        <div id="video_container">
+            <img src="stream.mjpg">
+        </div>
+
+        <!-- 滑块容器 -->
+        <div id="parameters_container">
+            <div class="parameter_container">
+                <!-- 转向个滑块 -->
+                <input type="range" id="slider_steering" min="0" max="5" value="1">
+                <p id="value_slider_steering">Steer: 1</p>
+            </div>
+            <div class="parameter_container">
+                <!-- 速度滑块 -->
+                <input type="range" id="slider_speed" min="0" max="5" value="1">
+                <p id="value_slider_speed">Speed: 1</p>
+            </div>
+            <div class="parameter_container">
+                <!-- 吸力滑块 -->
+                <input type="range" id="slider_suction" min="0" max="10" value="0">
+                <p id="value_slider_suction">Suction: 0</p>
+            </div>
+        </div>
+
+        <!-- 按钮容器 -->
+        <div id="button_container">
+            <button id="forward">Fwd</button>
+            <button id="turn_left">Left</button>
+            <button id="backward">Bwd</button>
+            <button id="turn_right">Rght</button>
+        </div>
+
+    </div>
+    
+
+    <script src="web_page.js"></script>
+</body>
+</html>
