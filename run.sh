@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 -m code.main
+python3 -m gwcr-robot-control.main

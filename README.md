@@ -12,7 +12,7 @@ Note: The main control part, web interaction, and signal transmission are univer
 Run 'setup.sh' using Bash.
 
 ### Operation:
-Run 'run.sh' using Bash, or directly execute 'python3 -m code.main'.
+Run 'run.sh' using Bash, or directly execute 'python3 -m gwcr-robot-control.main'.
 Open the robot control web page (according to the robot's IP address on the LAN) to operate.
 
 
@@ -30,5 +30,5 @@ Open the robot control web page (according to the robot's IP address on the LAN)
 使用bash运行setup.sh
 
 ### 运行:
-使用bash运行run.sh, 或直接运行python3 -m code.main
+使用bash运行run.sh, 或直接运行python3 -m gwcr-robot-control.main
 打开机器人控制网页(根据机器人在LAN上的ip地址)进行操作

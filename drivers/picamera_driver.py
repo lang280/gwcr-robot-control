@@ -79,8 +79,8 @@ def start_server(streamingOutputHandler, acceptAddress = '0.0.0.0', serverPort=8
 
 ''' 运行摄像机和服务器 '''
 def run_picamera_driver(serverPort_video):
-    with picamera.PiCamera(resolution='544x272', framerate=24) as camera:
-        camera.rotation = 180
+    with picamera.PiCamera(resolution='720x360', framerate=24) as camera:
+        camera.rotation = 0
 
         # 启动picam视频流
         streamingOutputHandler = StreamingOutputHandler()
